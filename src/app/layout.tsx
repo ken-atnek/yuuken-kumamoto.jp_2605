@@ -1,50 +1,62 @@
 /* =======================================
- * クラブ智 Layout
+ *株式会社 雄建 Layout
  * URL:src/app/layout.tsx
- * Created: 2026-03-23
- * Last updated: 2026-03-23
+ * Created: 2026-04-04
+ * Last updated: 2026-04-04
  * ======================================= */
 
 import type { Metadata } from 'next';
 import '@/styles/globals.scss';
-import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google';
 import SvgDefs from '@/components/SvgDefs';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import { isRealProduction } from '@/lib/env';
-
-const notoSans = Noto_Sans_JP({
-  subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700', '900'],
-  display: 'swap',
-  variable: '--font-sans',
-});
-
-const notoSerif = Noto_Serif_JP({
-  subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700', '900'],
-  display: 'swap',
-  variable: '--font-serif',
-});
-
+import { Noto_Sans_JP } from 'next/font/google';
 import localFont from 'next/font/local';
 
-const futura = localFont({
+const notoSansJp = Noto_Sans_JP({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+  variable: '--font-jp',
+  display: 'swap',
+});
+
+const poppins = localFont({
   src: [
     {
-      path: '../assets/fonts/FuturaCyrillicBook.woff2',
+      path: '../assets/fonts/Poppins-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/Poppins-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
+    {
+      path: '../assets/fonts/Poppins-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/Poppins-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/Poppins-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
   ],
-  variable: '--font-futura',
+  variable: '--font-poppins',
   display: 'swap',
 });
 
 // 本番のみ metadataBase を設定
 const metadataBase = isRealProduction
   ? new URL(
-      process.env.NEXT_PUBLIC_METADATA_BASE || 'https://www.club-tomo.com/'
+      process.env.NEXT_PUBLIC_METADATA_BASE || 'https://yuuken-kumamoto.jp/'
     )
   : undefined;
 
@@ -59,7 +71,7 @@ export const metadata: Metadata = {
           url: '/ogp.jpg',
           width: 1200,
           height: 630,
-          alt: 'クラブ智のOGP画像',
+          alt: '株式会社 雄建のOGP画像',
         },
       ],
     },
@@ -89,10 +101,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ja"
-      className={`${notoSans.variable} ${notoSerif.variable} ${futura.variable}`}
-    >
+    <html lang="ja" className={`${notoSansJp.variable} ${poppins.variable}`}>
       <head>
         <meta
           name="format-detection"

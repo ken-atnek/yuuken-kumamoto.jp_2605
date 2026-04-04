@@ -11,7 +11,7 @@
 //     scroll-behavior: auto;
 // }
 body {
-    @include Serif;
+    @include Sans;
 
     // font-feature-settings: "palt";
     font-size: clamp(1.2rem, calc($base-vw * 1vw) + calc($slice * 1px), 1.6rem);
@@ -23,8 +23,8 @@ body {
     min-height: 100vh;
     justify-content: space-between;
     width: 100%;
-    color: #000;
-    background-color: #fff;
+    color: $pure-black;
+    background-color: $main-white;
     @include tbw {
         overflow-x: clip;
     }
@@ -41,7 +41,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: $main-white;
 }
 section,
 article,

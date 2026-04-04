@@ -1,0 +1,13 @@
+/* =================================
+ * 	株式会社 雄建 FOOTER
+ * ------------------------------ */
+@use "../../styles/foundation" as *;
+
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable custom-property-pattern */
+// このファイル全体のルールを無効にする
+.containerFooter {
+    display: flex;
+    justify-content: center;
+}

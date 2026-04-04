@@ -1,0 +1,78 @@
+/* =================================
+ * 	株式会社 雄建 HEADER
+ * ================================= */
+@use "../../styles/foundation" as *;
+.containerHeader {
+    display: contents;
+    .blockMenu {
+        font-size: inherit;
+        width: 100%;
+        background-color: $main-gray;
+        color: $pure-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 57rem;
+        translate: 0 -57rem;
+        nav {
+            font-size: inherit;
+            display: flex;
+            gap: 0 2em;
+            a {
+                @include Poppins;
+                font-weight: 400;
+                text-transform: uppercase;
+                font-size: FZ(24);
+                letter-spacing: 0.3em;
+            }
+        }
+        &.isOpen {
+            translate: 0;
+            transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        &.closing {
+            transition: 0.2s ease-out;
+        }
+    }
+}
+
+/* --------------------
+ * 	ハンバーガーボタン
+ * -------------------- */
+.hamburgerButton {
+    position: fixed;
+    top: 3.5rem;
+    right: 3.2rem;
+    width: 8rem;
+    z-index: 100;
+    height: 2.2rem;
+    span {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 8rem;
+        height: 1px;
+        background-color: #d9d9d9;
+        transition: 0.3s ease-out;
+        &:nth-of-type(1) {
+            clip-path: inset(0 0 0 40%);
+            translate: 0 calc(-50% + 1rem);
+        }
+        &:nth-of-type(2) {
+            translate: 0 calc(-50% - 1rem);
+        }
+    }
+    &.is-open {
+        span {
+            &:nth-of-type(1) {
+                translate: 0 -50%;
+                rotate: -15deg;
+                clip-path: inset(0);
+            }
+            &:nth-of-type(2) {
+                translate: 0 -50%;
+                rotate: 15deg;
+            }
+        }
+    }
+}
