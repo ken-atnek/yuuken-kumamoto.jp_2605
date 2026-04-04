@@ -1,0 +1,28 @@
+/* =================================
+ * カラー変数
+ * ------------------------------ */
+
+$main-white: #ebebeb;
+$dark-brown: #391900;
+$light-brown: #c18d65;
+$main-red: #bb3d30;
+$main-black: #000;
+$base-white: #fffbf4;
+$bg-white: #fef4e5;
+$sub-black: #5f4e37;
+$font-black: #726b62;
+$complementary-red: #d0442e;
+$main-orange: #f29400;
+$sub-orange: #ffcd39;
+$color-orange: "f29400";
+
+/* =================================
+ * カラー定義
+ * ------------------------------ */
+:root {
+    /* base */
+    --color-white-100: #ebebeb;
+
+    /* semantic */
+    --main-white: var(--color-white-100);
+}
