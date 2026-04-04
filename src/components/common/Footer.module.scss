@@ -9,5 +9,69 @@
 // このファイル全体のルールを無効にする
 .containerFooter {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0 6rem;
+    padding: 8rem 6vw 3rem;
+    .itemLogo {
+        width: 10rem;
+        svg {
+            aspect-ratio: 101/142;
+            fill: $pure-black;
+        }
+    }
+    .copyright {
+        @include Poppins;
+        font-weight: 300;
+        font-size: FZ(14);
+        margin-right: auto;
+        margin-left: 6rem;
+    }
+    nav {
+        font-size: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em 0;
+        a {
+            font-size: FZ(16);
+            @include Poppins;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+    .boxShopInfo {
+        position: relative;
+        font-size: inherit;
+        display: flex;
+        flex-direction: column;
+        address {
+            font-size: FZ(14);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5em;
+        }
+        .tel,
+        .fax {
+            font-size: FZ(16);
+            @include Poppins;
+            font-weight: 500;
+            line-height: 1.4em;
+        }
+        & > div {
+            font-size: inherit;
+            display: flex;
+            align-items: center;
+            margin-top: 0.2em;
+            gap: 0 4em;
+            .itemMap,
+            .itemMail {
+                font-size: FZ(16);
+                @include Poppins;
+                font-weight: 500;
+            }
+            .itemMap {
+                text-decoration: underline;
+            }
+        }
+    }
 }

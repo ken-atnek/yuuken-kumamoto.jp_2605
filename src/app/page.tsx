@@ -7,6 +7,9 @@
 
 import type { Metadata } from 'next';
 import { isRealProduction } from '@/lib/env';
+import ContainerHero from '@/components/Top/ContainerHero';
+import ContainerConcept from '@/components/Top/ContainerConcept';
+import ContainerAbout from '@/components/Top/ContainerAbout';
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -17,5 +20,11 @@ export const generateMetadata = (): Metadata => {
   };
 };
 export default function Home() {
-  return <>123</>;
+  return (
+    <>
+      <ContainerHero />
+      <ContainerConcept />
+      <ContainerAbout />
+    </>
+  );
 }

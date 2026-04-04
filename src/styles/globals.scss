@@ -76,3 +76,10 @@ br {
         cursor: default;
     }
 }
+h2 {
+    @include Poppins;
+    font-size: FZ(40);
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}

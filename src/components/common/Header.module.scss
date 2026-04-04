@@ -3,7 +3,10 @@
  * ================================= */
 @use "../../styles/foundation" as *;
 .containerHeader {
-    display: contents;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
     .blockMenu {
         font-size: inherit;
         width: 100%;
