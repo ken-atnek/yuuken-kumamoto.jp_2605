@@ -204,3 +204,241 @@
         }
     }
 }
+/* =================================
+ * CONTACT
+ * ------------------------------ */
+.containerContact {
+    padding: 14.6rem 6vw 14.3rem;
+    display: flex;
+    flex-direction: column;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 94vw;
+        background-color: #f3f3f3;
+        z-index: -1;
+    }
+    form {
+        font-size: inherit;
+        width: 100%;
+        max-width: 80rem;
+        align-self: center;
+        margin-top: 6rem;
+        padding-bottom: 6rem;
+        // inputタグ初期化
+        input,
+        select {
+            margin: 0;
+            padding: 0;
+            background: none;
+            border: none;
+            border-radius: 0;
+            outline: none;
+            appearance: none;
+        }
+
+        // textareaタグ初期化
+        textarea {
+            outline: none;
+            min-height: 11lh;
+            field-sizing: content;
+            line-height: 1.6em;
+        }
+        select,
+        textarea,
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"] {
+            width: stretch;
+            color: #000;
+            padding: 0.8em 0.8em;
+            border-radius: 0.3rem;
+            letter-spacing: 0.04em;
+            background-color: #f1f3f2;
+            font-size: 1.6rem;
+            @include sp {
+                padding: 3vw;
+                font-size: 1.6rem;
+            }
+            &::placeholder {
+                color: #d2cfcf;
+            }
+
+            // 未入力項目のハイライト
+            &.isInvalid {
+                border: 3px solid #f00;
+            }
+        }
+        .headAnnounce {
+            font-size: FZ(16);
+            letter-spacing: 0.08em;
+            line-height: 1.8em;
+            margin-bottom: 3rem;
+        }
+        // 入力エリア/確認エリア
+        .boxForm,
+        .statusConfirm {
+            background-color: $main-gray;
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            padding-top: 5rem;
+            padding-bottom: 9rem;
+            dl {
+                position: relative;
+                display: inline-grid;
+                display: flex;
+                flex-direction: column;
+                gap: 3rem 0;
+                max-width: 65rem;
+                width: 100%;
+                align-self: center;
+                font-size: inherit;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: inherit;
+                    gap: 0.3em 0;
+                    dt {
+                        color: #fff;
+                        font-size: FZ(16);
+                    }
+                    &.boxIntro {
+                        flex-direction: row;
+                        gap: 0 2em;
+                        align-items: center;
+                        dd {
+                            position: relative;
+                            font-size: inherit;
+                            flex: 1;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                translate: 0 -50%;
+                                right: 1em;
+                                width: 1rem;
+                                aspect-ratio: 1/0.85;
+                                background-color: $pure-black;
+                                clip-path: polygon(0 0, 100% 0, 50% 100%);
+                            }
+                            select {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .box_btn {
+                position: absolute;
+                height: 8rem;
+                right: 0;
+                bottom: 6rem;
+                display: flex;
+                font-size: inherit;
+            }
+        }
+        // 入力エリア
+        .boxForm {
+            .box_btn {
+                width: 40vw;
+
+                .btnSub {
+                    background-color: $main-gray;
+                    width: 100%;
+                    font-size: inherit;
+                    padding-left: 4rem;
+                    display: flex;
+                    justify-content: space-between;
+                    span {
+                        font-size: FZ(16);
+                        color: $pure-white;
+                        justify-self: flex-start;
+                        letter-spacing: 0.3em;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        translate: 0 -50%;
+                        width: 37px;
+                        right: 2rem;
+                        @include svg-form-arrow("fff");
+                    }
+                }
+            }
+        }
+        // 確認
+        .statusConfirm {
+            color: $pure-white;
+            p {
+                align-self: center;
+                font-size: FZ(16);
+                margin-bottom: 3rem;
+            }
+            dl {
+                div {
+                    dd {
+                        padding-left: 1em;
+                        font-size: FZ(18);
+                    }
+                }
+            }
+            .box_btn {
+                gap: 0 1em;
+                width: 60vw;
+
+                .btnBack {
+                    background-color: $main-gray;
+                    width: 100%;
+                    font-size: inherit;
+                    padding-right: 4rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    span {
+                        font-size: FZ(16);
+                        color: $pure-white;
+                        justify-self: flex-start;
+                        letter-spacing: 0.3em;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        translate: 0 -50%;
+                        width: 37px;
+                        left: 2rem;
+                        @include svg-form-arrow("fff");
+                        scale: -1 1;
+                    }
+                }
+                .btnSub {
+                    background-color: $main-gray;
+                    width: 100%;
+                    font-size: inherit;
+                    padding-left: 4rem;
+                    display: flex;
+                    justify-content: space-between;
+                    span {
+                        font-size: FZ(16);
+                        color: $pure-white;
+                        justify-self: flex-start;
+                        letter-spacing: 0.3em;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        translate: 0 -50%;
+                        width: 37px;
+                        right: 2rem;
+                        @include svg-form-arrow("fff");
+                    }
+                }
+            }
+        }
+    }
+}
