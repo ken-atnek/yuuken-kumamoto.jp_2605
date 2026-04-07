@@ -2,7 +2,6 @@
  * TOP WORKS セクション
  * ------------------------------ */
 @use "../styles/foundation/" as *;
-
 .containerWorks {
     padding: 10rem 6vw 12rem;
     display: flex;
@@ -19,7 +18,6 @@
     flex-direction: column;
     gap: 4rem 0;
 }
-
 .categoryRow {
     display: flex;
     flex-direction: column;
@@ -34,9 +32,7 @@
     right: 0;
     writing-mode: vertical-rl;
     font-size: fz(10);
-
     @include poppins;
-
     font-weight: 300;
     letter-spacing: 0.12em;
     color: $pure-white;
@@ -52,7 +48,6 @@
     gap: 0.4rem;
     padding-right: 2.4rem;
 }
-
 .thumbItem {
     aspect-ratio: 3/2;
     overflow: hidden;
@@ -66,23 +61,18 @@
     justify-content: space-between;
     padding-right: 0.4rem;
 }
-
 .categoryName {
     display: flex;
     flex-direction: column;
     gap: 0.3rem 0;
 }
-
 .nameEn {
     font-size: fz(20);
-
     @include poppins;
-
     font-weight: 300;
     letter-spacing: 0.12em;
     color: $pure-white;
 }
-
 .nameJp {
     font-size: fz(11);
     letter-spacing: 0.06em;
@@ -100,14 +90,12 @@
     justify-content: center;
     flex-shrink: 0;
     transition: border-color 0.2s;
-
     span {
         display: block;
         width: 1.2rem;
         height: 1px;
         background-color: $pure-white;
         position: relative;
-
         &::after {
             content: "";
             position: absolute;
@@ -121,7 +109,6 @@
             translate: 0 -50%;
         }
     }
-
     @include hover {
         border-color: $pure-white;
     }
@@ -135,22 +122,17 @@
     justify-content: flex-end;
     padding-right: 0.4rem;
 }
-
 .btnViewAll {
     display: flex;
     align-items: center;
     gap: 0 1.6rem;
     color: $pure-white;
-
     span {
         font-size: fz(13);
-
         @include poppins;
-
         font-weight: 300;
         letter-spacing: 0.16em;
     }
-
     &::after {
         content: "";
         display: block;
@@ -160,7 +142,6 @@
         flex-shrink: 0;
         transition: width 0.3s ease;
     }
-
     @include hover {
         &::after {
             width: 6rem;

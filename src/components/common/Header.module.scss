@@ -2,14 +2,12 @@
  * 	株式会社 雄建 HEADER
  * ================================= */
 @use "../../styles/foundation" as *;
-
 .containerHeader {
     position: fixed;
     left: 0;
     top: 0;
     z-index: 10;
     height: 1px;
-
     .blockMenu {
         font-size: inherit;
         width: 100%;
@@ -20,27 +18,22 @@
         align-items: center;
         height: 57rem;
         translate: 0 -57rem;
-
         nav {
             font-size: inherit;
             display: flex;
             gap: 0 2em;
-
             a {
                 @include poppins;
-
                 font-weight: 400;
                 text-transform: uppercase;
                 font-size: fz(24);
                 letter-spacing: 0.3em;
             }
         }
-
         &.isOpen {
             translate: 0;
             transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
         &.closing {
             transition: 0.2s ease-out;
         }
@@ -57,7 +50,6 @@
     width: 8rem;
     z-index: 100;
     height: 2.2rem;
-
     span {
         position: absolute;
         top: 50%;
@@ -66,17 +58,14 @@
         height: 1px;
         background-color: #d9d9d9;
         transition: 0.3s ease-out;
-
         &:nth-of-type(1) {
             clip-path: inset(0 0 0 40%);
             translate: 0 calc(-50% + 1rem);
         }
-
         &:nth-of-type(2) {
             translate: 0 calc(-50% - 1rem);
         }
     }
-
     &.is-open {
         span {
             &:nth-of-type(1) {
@@ -84,7 +73,6 @@
                 rotate: -15deg;
                 clip-path: inset(0);
             }
-
             &:nth-of-type(2) {
                 translate: 0 -50%;
                 rotate: 15deg;
