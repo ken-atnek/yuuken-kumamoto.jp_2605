@@ -101,7 +101,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${notoSansJp.variable} ${poppins.variable}`}>
+    <html lang="ja" className={`${notoSansJp.variable} ${poppins.variable}`} data-scroll-behavior="smooth">
       <head>
         <meta
           name="format-detection"

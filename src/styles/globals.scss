@@ -11,7 +11,7 @@
 //     scroll-behavior: auto;
 // }
 body {
-    @include Sans;
+    @include sans;
 
     // font-feature-settings: "palt";
     font-size: clamp(1.2rem, calc($base-vw * 1vw) + calc($slice * 1px), 1.6rem);
@@ -25,16 +25,20 @@ body {
     width: 100%;
     color: $pure-black;
     background-color: $main-white;
+
     @include tbw {
         overflow-x: clip;
     }
+
     @include tb {
         font-size: 1.4vw;
     }
+
     @include sp {
         font-size: 3.6vw;
     }
 }
+
 main {
     font-size: inherit;
     flex: 1;
@@ -43,6 +47,7 @@ main {
     flex-direction: column;
     background-color: $main-white;
 }
+
 section,
 article,
 header,
@@ -52,33 +57,40 @@ footer {
     font-size: inherit;
     z-index: 1;
 }
+
 svg {
     width: 100%;
     fill: unset;
     stroke: unset;
 }
+
 br {
     &.pc {
         @include sp {
             display: none;
         }
     }
+
     &.sp {
         display: none;
+
         @include sp {
             display: inline;
         }
     }
 }
+
 @include pc {
     a[href^="tel:"] {
         pointer-events: none;
         cursor: default;
     }
 }
+
 h2 {
-    @include Poppins;
-    font-size: FZ(40);
+    @include poppins;
+
+    font-size: fz(40);
     font-weight: 300;
     letter-spacing: 0.3em;
     text-transform: uppercase;

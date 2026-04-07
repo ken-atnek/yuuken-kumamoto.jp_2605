@@ -23,6 +23,7 @@
     background-origin: border-box;
     background-repeat: no-repeat;
 }
+
 html {
     /* アプリケーションでパーセントによる高さを許可する  */
     block-size: 100%;
@@ -44,6 +45,7 @@ html {
         scroll-behavior: smooth;
     }
 }
+
 body {
     position: relative;
     font-size: 1.6em;
@@ -52,8 +54,10 @@ body {
     overflow-x: hidden;
     min-block-size: 100%;
 }
+
 a {
     color: inherit;
+
     &:link,
     &:visited,
     &:hover,
@@ -66,6 +70,7 @@ a {
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
     display: block;
 }
+
 :where(img, svg, video) {
     block-size: auto;
     max-inline-size: 100%;
@@ -102,6 +107,7 @@ a {
 :where(ul, ol, li)[role="list"] {
     list-style: none;
 }
+
 ul,
 ol,
 li {
@@ -118,10 +124,12 @@ a:not([class]) {
     :focus-visible {
         transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
     }
+
     :where(:not(:active)):focus-visible {
         transition-duration: 0.25s;
     }
 }
+
 :where(:not(:active)):focus-visible {
     outline-offset: 5px;
 }
@@ -152,15 +160,18 @@ a:not([class]) {
 )[disabled] {
     cursor: not-allowed;
 }
+
 time {
     font-size: 1em;
 }
+
 hr {
     height: 0;
     margin: 0;
     padding: 0;
     border: 0;
 }
+
 span,
 strong,
 em,
@@ -169,6 +180,7 @@ i,
 b {
     font-size: 1em;
 }
+
 button {
     border: none;
     text-decoration: none;

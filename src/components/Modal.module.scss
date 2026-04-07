@@ -2,6 +2,7 @@
  * 	モーダル
  * ------------------------------ */
 @use "../styles/foundation/" as *;
+
 .blockModal {
     position: fixed;
     top: 0;
@@ -11,9 +12,11 @@
     display: grid;
     place-items: center;
     background-color: rgba(#000, 0.2);
+
     // @include SunSerif;
     font-size: inherit;
     z-index: 100;
+
     .innerModal {
         display: flex;
         font-size: inherit;
@@ -23,11 +26,13 @@
         padding: 3em 8em;
         border-radius: 2rem;
         align-items: center;
+
         @include sp {
             padding-inline: unset;
             width: stretch;
             max-width: 90vw;
         }
+
         .itemMessage {
             font-size: inherit;
             display: flex;
@@ -37,15 +42,18 @@
             // 未入力警告用
             &.wrapCaution {
                 gap: 0.5em 0;
+
                 h6 {
-                    font-size: FZ(18);
+                    font-size: fz(18);
                     font-weight: 700;
                     color: #f00;
                     letter-spacing: 0.04em;
                 }
+
                 p {
-                    font-size: FZ(16);
+                    font-size: fz(16);
                 }
+
                 ul {
                     font-size: inherit;
                     display: flex;
@@ -53,12 +61,15 @@
                     align-items: center;
                     gap: 0.2em 0;
                     margin-top: 1rem;
+
                     li {
-                        font-size: FZ(16);
+                        font-size: fz(16);
                         font-weight: 500;
+
                         &::before {
                             content: "【";
                         }
+
                         &::after {
                             content: "】";
                         }
@@ -69,18 +80,20 @@
             // 送信成功
             &.wrapSuccess {
                 h6 {
-                    font-size: FZ(18);
+                    font-size: fz(18);
                     font-weight: 700;
                     letter-spacing: 0.04em;
                 }
+
                 p {
                     margin-top: 1rem;
-                    font-size: FZ(16);
+                    font-size: fz(16);
                 }
             }
         }
+
         button {
-            font-size: FZ(14);
+            font-size: fz(14);
             margin-top: 2em;
             padding: 0.5em 3em;
             border: 1px solid #9d9d9d;

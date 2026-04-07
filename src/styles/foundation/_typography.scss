@@ -1,9 +1,10 @@
 /* =================================
  * フォント設定
  * ------------------------------ */
-@mixin Sans {
+@mixin sans {
     font-family: var(--font-jp), "Noto Sans JP", sans-serif;
 }
-@mixin Poppins {
-    font-family: var(--font-poppins), "Poppins", sans-serif;
+
+@mixin poppins {
+    font-family: var(--font-poppins), Poppins, sans-serif;
 }

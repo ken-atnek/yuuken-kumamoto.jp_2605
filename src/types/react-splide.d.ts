@@ -1,7 +1,14 @@
 // @splidejs/react-splide の package.json exports に types 条件がないため手動宣言
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
+declare module '@splidejs/react-splide/css' {}
+
 declare module '@splidejs/react-splide' {
-  import type { ComponentType, HTMLAttributes } from 'react';
+  import type {
+    ForwardRefExoticComponent,
+    RefAttributes,
+    ComponentType,
+    HTMLAttributes,
+  } from 'react';
 
   export interface SplideOptions {
     type?: 'slide' | 'loop' | 'fade';
@@ -15,7 +22,20 @@ declare module '@splidejs/react-splide' {
     speed?: number;
     rewind?: boolean;
     drag?: boolean | 'free';
+    isNavigation?: boolean;
+    fixedWidth?: number | string;
+    fixedHeight?: number | string;
     [key: string]: unknown;
+  }
+
+  /** コア Splide インスタンス（splide プロパティ経由でアクセス） */
+  export interface SplideCore {
+    sync: (splide: SplideCore) => void;
+  }
+
+  /** React コンポーネント ref で得られるインスタンス */
+  export interface SplideRef {
+    splide: SplideCore | null;
   }
 
   export interface SplideProps extends HTMLAttributes<HTMLDivElement> {
@@ -30,7 +50,7 @@ declare module '@splidejs/react-splide' {
     tag?: string;
   }
 
-  export const Splide: ComponentType<SplideProps>;
+  export const Splide: ForwardRefExoticComponent<SplideProps & RefAttributes<SplideRef>>;
   export const SplideSlide: ComponentType<SplideSlideProps>;
   export const SplideTrack: ComponentType<HTMLAttributes<HTMLDivElement>>;
 }

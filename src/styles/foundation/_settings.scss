@@ -5,8 +5,8 @@
  * ------------------------------ */
 
 // MAX-WIDTH宣言
-$M-width: 1024;
-$PcMaxWidth: calc($M-width * 1px);
+$m-width: 1024;
+$pc-max-width: calc($m-width * 1px);
 
 // フォントサイズ(mx1000)
 $max-font: 16;
@@ -14,12 +14,12 @@ $min-font: 12;
 $sp-width: 375;
 
 // 可変フォントサイズ計算
-$tilt: calc(($max-font - $min-font) / ($M-width - $sp-width));
+$tilt: calc(($max-font - $min-font) / ($m-width - $sp-width));
 $slice: calc($min-font - ($tilt * $sp-width));
 $base-vw: calc($tilt * 100);
 
 // 指定フォント関数
-@function FZ($size) {
+@function fz($size) {
     @if $size <= $min-font {
         @return $min-font * 1px;
     } @else {
@@ -27,5 +27,5 @@ $base-vw: calc($tilt * 100);
     }
 }
 
-$articleMaxWidth: 1086px;
+$article-max-width: 1086px;
 $section-aspect: math.div(1366, 1024);

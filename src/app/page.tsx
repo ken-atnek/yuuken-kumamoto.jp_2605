@@ -10,6 +10,7 @@ import { isRealProduction } from '@/lib/env';
 import ContainerHero from '@/components/Top/ContainerHero';
 import ContainerConcept from '@/components/Top/ContainerConcept';
 import ContainerAbout from '@/components/Top/ContainerAbout';
+import ContainerWorks from '@/components/Top/ContainerWorks';
 import ContainerContact from '@/components/Top/ContainerContact';
 
 export const generateMetadata = (): Metadata => {
@@ -25,6 +26,7 @@ export default function Home() {
     <>
       <ContainerHero />
       <ContainerConcept />
+      <ContainerWorks />
       <ContainerAbout />
       <ContainerContact />
     </>

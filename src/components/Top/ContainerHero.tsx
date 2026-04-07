@@ -19,6 +19,8 @@ export default function ContainerHero() {
           src="/images/_dummy/hero.webp"
           width={1680}
           height={768}
+          priority
+          loading="eager"
         />
       </div>
       <article>
