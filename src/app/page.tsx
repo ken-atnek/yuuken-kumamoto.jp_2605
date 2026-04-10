@@ -15,9 +15,9 @@ import ContainerContact from '@/components/Top/ContainerContact';
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: '株式会社 雄建｜熊本の夜に新たなステージを',
+    title: '株式会社 雄建｜熊本県上益城郡益城町の建築工事',
     description: isRealProduction
-      ? '「株式会社 雄建」は心から落ち着く空間をコンセプトに、これからも感謝の気持ちを忘れず、皆様に愛されるお店を目指してまいります。「株式会社 雄建」にお越しいただいた皆様の特別な時間を是非、「株式会社 雄建」の素敵な女性たちと一緒に過ごして頂ければ幸いです。熊本市中央区栄通り'
+      ? '熊本県上益城郡益城町で建築工事、大工工事、屋根工事、タイル・ブロツク工事、内装仕上工事、などの建設工事を行っております。'
       : undefined,
   };
 };
