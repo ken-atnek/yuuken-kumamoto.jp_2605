@@ -10,7 +10,7 @@ import ExternalLink from '@/components/common/ExternalLink';
 import styles from '@/styles/PageTop.module.scss';
 export default function ContainerAbout() {
   return (
-    <section className={styles.containerAbout}>
+    <section className={styles.containerAbout} id="ContainerAbout">
       <h2>about</h2>
       <article>
         <div className={styles.itemLogo}>

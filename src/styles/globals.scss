@@ -6,10 +6,9 @@
 @use "./foundation/interaction" as *;
 @use "./foundation/svg" as *;
 @use "./foundation/ui" as *;
-
-// html {
-//     scroll-behavior: auto;
-// }
+html {
+    scroll-behavior: smooth;
+}
 body {
     @include sans;
 

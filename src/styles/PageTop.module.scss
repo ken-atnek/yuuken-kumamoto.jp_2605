@@ -12,6 +12,9 @@
  * ------------------------------ */
 .containerHero {
     padding: 1rem 1rem 0;
+    @include sp {
+        padding: 0;
+    }
     .itemImage {
         position: relative;
         width: 100%;
@@ -39,6 +42,9 @@
         color: $pure-white;
         .itemLogo {
             width: 14rem;
+            @include sp {
+                width: 22vw;
+            }
             svg {
                 aspect-ratio: 101/142;
                 fill: $pure-white;
@@ -50,18 +56,27 @@
             gap: 0 0.8em;
             translate: 1em;
             margin: 2em 0 3em;
+            @include sp {
+                margin: 2vw 0;
+            }
             span {
                 font-size: fz(64);
                 font-weight: 300;
                 min-width: 0.5em;
                 display: flex;
                 justify-content: center;
+                @include sp {
+                    font-size: 5vw;
+                }
             }
         }
         p {
             font-size: fz(16);
             @include poppins;
             font-weight: 300;
+            @include sp {
+                font-size: fz(14);
+            }
         }
     }
 }
@@ -73,13 +88,10 @@
     display: flex;
     flex-direction: column;
     padding: 0 1rem 14rem 6vw;
-    background-image: repeating-linear-gradient(
-        to right,
-        transparent 0,
-        transparent 159px,
-        #efefef 159px,
-        #efefef 160px
-    );
+    @include border-gradient;
+    @include sp {
+        padding: 8vw 4vw;
+    }
     &::before {
         content: "";
         position: absolute;
@@ -94,13 +106,22 @@
         justify-content: space-between;
         padding-top: 4rem;
         gap: 0 2vw;
+        @include sp {
+            padding-top: unset;
+        }
         .boxTitle {
             font-size: inherit;
             display: flex;
             flex-direction: column;
             gap: 8rem 0;
+            @include sp {
+                gap: 8vw;
+            }
             h2 {
                 margin-top: 10rem;
+                @include sp {
+                    margin-top: unset;
+                }
             }
             .textJp {
                 margin-left: 9.5vw;
@@ -118,12 +139,19 @@
             letter-spacing: -0.03em;
             padding-right: 3rem;
             line-height: 0.9em;
+            @include sp {
+                display: none;
+            }
         }
     }
     .itemImage {
         width: 68vw;
         margin-top: 4rem;
         margin-left: 9.5vw;
+        @include sp {
+            margin-left: unset;
+            width: 100%;
+        }
         img {
             width: 100%;
             aspect-ratio: 3.1;
@@ -142,6 +170,9 @@
     flex-direction: column;
     background-color: $main-gray;
     color: $pure-white;
+    @include sp {
+        padding: 8vw 0 42vw;
+    }
     h2 {
         margin-left: 6vw;
     }
@@ -152,18 +183,32 @@
         padding-right: 6vw;
         font-size: inherit;
         margin-top: 10rem;
+        @include sp {
+            margin-top: 8vw;
+            padding-right: 4vw;
+            gap: 18vw 0;
+        }
         .blockCategory {
             position: relative;
             display: flex;
             font-size: inherit;
             gap: 0 2rem;
+            @include sp {
+                gap: 0;
+            }
             .thumbPair {
                 display: grid;
                 grid-template-columns: 50vw 1fr;
                 gap: 0 1.6rem;
+                @include sp {
+                    gap: 0 2vw;
+                }
                 .thumbItem {
                     height: 50rem;
                     display: block;
+                    @include sp {
+                        height: 34vw;
+                    }
                     img {
                         width: 100%;
 
@@ -176,6 +221,9 @@
                 @include poppins;
                 font-size: inherit;
                 writing-mode: vertical-rl;
+                @include sp {
+                    display: none;
+                }
                 h3,
                 h4 {
                     font-size: fz(14);
@@ -215,6 +263,13 @@
                 justify-content: space-between;
                 padding-left: 7rem;
                 padding-top: 1.4rem;
+                @include sp {
+                    width: 70vw;
+                    padding-left: 4vw;
+                    padding-top: 3vw;
+                    max-width: unset;
+                    bottom: -10vw;
+                }
                 .categoryName {
                     display: flex;
                     flex-direction: column;
@@ -224,6 +279,9 @@
                         @include poppins;
                         letter-spacing: 0.3em;
                         font-weight: 300;
+                        @include sp {
+                            font-size: fz(18);
+                        }
                     }
                     .nameJp {
                         font-size: fz(16);
@@ -236,6 +294,9 @@
                     aspect-ratio: 1;
                     border: 1px solid #fff;
                     border-radius: 50%;
+                    @include sp {
+                        width: 12vw;
+                    }
                     &::after {
                         content: "";
                         position: absolute;
@@ -243,6 +304,9 @@
                         margin: auto;
                         width: 37px;
                         @include svg-form-arrow("fff");
+                        @include sp {
+                            width: 6vw;
+                        }
                     }
                 }
             }
@@ -254,6 +318,9 @@
         bottom: 6rem;
         display: flex;
         font-size: inherit;
+        @include sp {
+            bottom: 8vw;
+        }
         a {
             height: 8rem;
             font-size: inherit;
@@ -265,6 +332,12 @@
             background-color: $pure-white;
             color: $main-gray;
             padding-left: 4rem;
+            @include sp {
+                padding-left: 4vw;
+                height: 14vw;
+                width: 80vw;
+                min-width: unset;
+            }
             span {
                 font-size: fz(16);
                 justify-self: flex-start;
@@ -278,6 +351,9 @@
                 width: 37px;
                 right: 2rem;
                 @include svg-form-arrow("8c9494");
+                @include sp {
+                    width: 6vw;
+                }
             }
         }
     }
@@ -290,18 +366,19 @@
     padding: 14.6rem 6vw 14.3rem;
     display: flex;
     flex-direction: column;
-    background-image: repeating-linear-gradient(
-        to right,
-        transparent 0,
-        transparent 159px,
-        #efefef 159px,
-        #efefef 160px
-    );
+    @include border-gradient;
+    @include sp {
+        padding: 8vw 4vw;
+    }
     article {
         max-width: 100rem;
         display: flex;
         align-self: center;
         padding-top: 13rem;
+        @include sp {
+            max-width: unset;
+            padding-top: 8vw;
+        }
         .itemLogo {
             flex: 1;
             display: flex;
@@ -310,6 +387,9 @@
             align-items: flex-start;
             padding-top: 1.8rem;
             padding-inline: 4vw;
+            @include sp {
+                display: none;
+            }
             svg {
                 aspect-ratio: 101/142;
                 fill: $pure-black;
@@ -322,12 +402,18 @@
             display: grid;
             grid-template-columns: auto 1fr;
             width: 58rem;
+            @include sp {
+                width: 100%;
+            }
             & > div {
                 font-size: inherit;
                 grid-column: span 2;
                 display: grid;
                 grid-template-columns: subgrid;
                 gap: 0 2em;
+                @include sp {
+                    gap: 0 2vw;
+                }
                 &:not(:last-of-type) {
                     border-bottom: 1px solid #afafaf;
                     dt {
@@ -378,6 +464,9 @@
     padding: 14.6rem 6vw 14.3rem;
     display: flex;
     flex-direction: column;
+    @include sp {
+        padding: 8vw 4vw 14vw;
+    }
     &::before {
         content: "";
         position: absolute;
@@ -387,6 +476,9 @@
         width: 94vw;
         background-color: #f3f3f3;
         z-index: -1;
+        @include sp {
+            width: 100%;
+        }
     }
     form {
         font-size: inherit;
@@ -395,6 +487,9 @@
         align-self: center;
         margin-top: 6rem;
         padding-bottom: 6rem;
+        @include sp {
+            margin-top: 6vw;
+        }
 
         // inputタグ初期化
         input,
@@ -445,6 +540,9 @@
             letter-spacing: 0.08em;
             line-height: 1.8em;
             margin-bottom: 3rem;
+            @include sp {
+                margin-bottom: 6vw;
+            }
         }
 
         // 入力エリア/確認エリア
@@ -456,6 +554,10 @@
             flex-direction: column;
             padding-top: 5rem;
             padding-bottom: 9rem;
+            @include sp {
+                padding-inline: 2vw;
+                padding-bottom: 8vw;
+            }
             dl {
                 position: relative;
                 display: inline-grid;
@@ -479,6 +581,11 @@
                         flex-direction: row;
                         gap: 0 2em;
                         align-items: center;
+                        @include sp {
+                            flex-direction: column;
+                            align-items: stretch;
+                            gap: 0.3em 0;
+                        }
                         dd {
                             position: relative;
                             font-size: inherit;
@@ -508,6 +615,10 @@
                 bottom: 6rem;
                 display: flex;
                 font-size: inherit;
+                @include sp {
+                    bottom: 8vw;
+                    height: 14vw;
+                }
             }
         }
 
@@ -515,6 +626,9 @@
         .boxForm {
             .box_btn {
                 width: 40vw;
+                @include sp {
+                    width: 60vw;
+                }
                 .btnSub {
                     background-color: $main-gray;
                     width: 100%;

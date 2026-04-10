@@ -7,6 +7,7 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import styles from './Header.module.scss';
 import clsx from 'clsx';
 import { navMenu } from '@/data/navMenuData';
@@ -17,6 +18,29 @@ const HeaderInner = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    closeMenu();
+    const hash = href.split('#')[1];
+    if (!hash) return;
+    const el = document.getElementById(hash);
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: 'smooth' });
+    history.pushState(null, '', `#${hash}`);
+  };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    const id = hash.slice(1);
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  }, []);
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
@@ -48,13 +72,13 @@ const HeaderInner = () => {
       >
         <nav>
           {navMenu.map((item) => (
-            <a
+            <Link
               href={item.href}
-              onClick={closeMenu}
+              onClick={(e) => handleNavClick(e, item.href)}
               key={`${item.href}-${item.label}`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </article>
