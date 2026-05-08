@@ -40,12 +40,10 @@
         }
     }
 }
-
 .menuOpen {
     translate: 0 !important;
     transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .menuClosing {
     transition: 0.2s ease-out;
 }
@@ -89,7 +87,6 @@
         }
     }
 }
-
 .hamburgerOpen {
     span {
         &:nth-of-type(1) {

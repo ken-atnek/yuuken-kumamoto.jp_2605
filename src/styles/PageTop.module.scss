@@ -242,7 +242,7 @@
                         position: absolute;
                         top: 0;
                         left: 50%;
-                        transition: -50%;
+                        translate: -50%;
                         width: 1px;
                         height: 3.6em;
                         background-color: $pure-white;
@@ -515,7 +515,7 @@
         input[type="text"],
         input[type="tel"],
         input[type="email"] {
-            width: stretch;
+            width: 100%;
             color: #000;
             padding: 0.8em;
             border-radius: 0.3rem;
