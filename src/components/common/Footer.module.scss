@@ -72,21 +72,21 @@
             font-weight: 500;
             line-height: 1.4em;
         }
+        .itemMap,
+        .itemMail {
+            font-size: fz(16);
+            @include poppins;
+            font-weight: 500;
+        }
+        .itemMap {
+            text-decoration: underline;
+        }
         & > div {
             font-size: inherit;
             display: flex;
             align-items: center;
             margin-top: 0.2em;
             gap: 0 4em;
-            .itemMap,
-            .itemMail {
-                font-size: fz(16);
-                @include poppins;
-                font-weight: 500;
-            }
-            .itemMap {
-                text-decoration: underline;
-            }
         }
     }
 }

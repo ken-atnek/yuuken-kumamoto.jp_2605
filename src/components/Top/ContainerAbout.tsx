@@ -65,6 +65,14 @@ export default function ContainerAbout() {
               </ul>
             </dd>
           </div>
+          <div>
+            <dt>関連企業</dt>
+            <dd>
+              <ExternalLink href="https://no3-international.com/">
+                株式会社 No.3 INTERNATIONAL
+              </ExternalLink>
+            </dd>
+          </div>
         </dl>
       </article>
     </section>
