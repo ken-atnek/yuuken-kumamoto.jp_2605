@@ -38,14 +38,16 @@
                 letter-spacing: 0.3em;
             }
         }
-        &.isOpen {
-            translate: 0;
-            transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        &.closing {
-            transition: 0.2s ease-out;
-        }
     }
+}
+
+.menuOpen {
+    translate: 0 !important;
+    transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menuClosing {
+    transition: 0.2s ease-out;
 }
 
 /* --------------------
@@ -57,7 +59,7 @@
     top: 3.5rem;
     right: 3.2rem;
     width: var(--box-width);
-    z-index: 100;
+    z-index: 400;
     height: 2.2rem;
     @include sp {
         --box-width: 10vw;
@@ -86,17 +88,18 @@
             }
         }
     }
-    &.is-open {
-        span {
-            &:nth-of-type(1) {
-                translate: 0 -50%;
-                rotate: -15deg;
-                clip-path: inset(0);
-            }
-            &:nth-of-type(2) {
-                translate: 0 -50%;
-                rotate: 15deg;
-            }
+}
+
+.hamburgerOpen {
+    span {
+        &:nth-of-type(1) {
+            translate: 0 -50%;
+            rotate: -15deg;
+            clip-path: inset(0);
+        }
+        &:nth-of-type(2) {
+            translate: 0 -50%;
+            rotate: 15deg;
         }
     }
 }

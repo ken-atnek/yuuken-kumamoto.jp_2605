@@ -16,7 +16,7 @@ const HeaderInner = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
 
   const handleNavClick = (
@@ -65,8 +65,8 @@ const HeaderInner = () => {
       <article
         className={clsx(
           styles.blockMenu,
-          isOpen && styles.isOpen,
-          !isOpen && styles.closing
+          isOpen && styles.menuOpen,
+          !isOpen && styles.menuClosing
         )}
         ref={navRef}
       >
@@ -86,7 +86,7 @@ const HeaderInner = () => {
         type="button"
         ref={buttonRef}
         className={`${styles.hamburgerButton} ${
-          isOpen ? styles['is-open'] : ''
+          isOpen ? styles.hamburgerOpen : ''
         }`}
         onClick={toggleMenu}
         aria-expanded={isOpen}
