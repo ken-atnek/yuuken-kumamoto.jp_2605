@@ -1,0 +1,223 @@
+/* =================================
+ * WORKS モーダル
+ * ------------------------------ */
+@use "../../styles/foundation/" as *;
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background-color: rgba(#202223, 1);
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: $pure-white;
+    font-size: inherit;
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+    @include sp {
+        padding-top: 16vw;
+        padding-bottom: 20vw;
+        overflow-x: hidden;
+    }
+    .btnClose {
+        --box-width: 8rem;
+        position: absolute;
+        top: 3.5rem;
+        right: 3.2rem;
+        width: var(--box-width);
+        z-index: 100;
+        height: 2.2rem;
+        @include sp {
+            --box-width: 10vw;
+            top: 4vw;
+            right: 4vw;
+        }
+        span {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: var(--box-width);
+            height: 1px;
+            translate: 0 -50%;
+            background-color: #d9d9d9;
+            &:nth-of-type(1) {
+                rotate: -15deg;
+            }
+            &:nth-of-type(2) {
+                rotate: 15deg;
+            }
+        }
+    }
+    .inner {
+        position: relative;
+        width: 86vw;
+        max-width: 100rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem 0;
+        font-size: inherit;
+        @include sp {
+            width: 96vw;
+            gap: 2vw 0;
+            max-width: unset;
+        }
+        .titleWrap {
+            display: flex;
+            font-size: inherit;
+            gap: 0 1em;
+            .titleLocation {
+                font-size: fz(14);
+                letter-spacing: 0.08em;
+            }
+            .titleName {
+                font-size: fz(14);
+                letter-spacing: 0.08em;
+            }
+        }
+        .sliderWrap {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem 0;
+            font-size: inherit;
+            @include sp {
+                width: 100%;
+            }
+            .categoryHeader {
+                position: absolute;
+                top: 0;
+                left: calc(100% + 1.6rem);
+                @include poppins;
+                font-size: inherit;
+                writing-mode: vertical-rl;
+                @include sp {
+                    position: relative;
+                    top: unset;
+                    left: unset;
+                    writing-mode: unset;
+                    order: 1;
+                }
+                h3,
+                h4 {
+                    font-size: fz(14);
+                    text-transform: uppercase;
+                    letter-spacing: 0.3em;
+                }
+                h3 {
+                    font-weight: 600;
+                }
+                h4 {
+                    position: relative;
+                    font-weight: 300;
+                    padding-top: 4em;
+                    @include sp {
+                        padding-top: unset;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        translate: -50%;
+                        width: 1px;
+                        height: 3.6em;
+                        background-color: $pure-white;
+                        @include sp {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* メインスライダー */
+        .mainSlider {
+            width: 100%;
+            position: relative;
+            .splideArrows {
+                display: none;
+            }
+
+            // Splideのデフォルト矢印を上書き
+            :global(.splide__arrow) {
+                background: transparent;
+                border: 1px solid rgba($pure-white, 1);
+                width: 21rem;
+                height: 21rem;
+                border-radius: 50%;
+                opacity: 1;
+                transition: border-color 0.2s;
+                @include sp {
+                    width: 14vw;
+                    height: 14vw;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    margin: auto;
+                    width: 37px;
+                    @include svg-form-arrow("fff");
+                    @include sp {
+                        width: 6vw;
+                    }
+                }
+                svg {
+                    display: none;
+                }
+                @include hover {
+                    border-color: $pure-white;
+                }
+            }
+            :global(.splide__arrow--prev) {
+                left: -18rem;
+                @include sp {
+                    left: -6vw;
+                }
+                &::after {
+                    scale: -1 1;
+                }
+            }
+            :global(.splide__arrow--next) {
+                right: -18rem;
+                @include sp {
+                    right: -6vw;
+                }
+            }
+            .mainSlide {
+                aspect-ratio: 430/313;
+                overflow: hidden;
+            }
+        }
+    }
+
+    /* サムネイルgrid */
+    .thumbGrid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.8rem;
+        .thumbItem {
+            display: block;
+            aspect-ratio: 1;
+            overflow: hidden;
+            background-color: #111;
+            padding: 0;
+            border: none;
+            cursor: pointer;
+            opacity: 0.45;
+            transition: opacity 0.2s;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        .thumbActive {
+            opacity: 1;
+            pointer-events: none;
+        }
+    }
+}

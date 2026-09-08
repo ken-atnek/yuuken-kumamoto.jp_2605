@@ -1,0 +1,92 @@
+/* =================================
+ * 	株式会社 雄建 FOOTER
+ * ------------------------------ */
+@use "../../styles/foundation" as *;
+
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable custom-property-pattern */
+// このファイル全体のルールを無効にする
+.containerFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0 6rem;
+    padding: 8rem 6vw 3rem;
+    @include sp {
+        justify-content: unset;
+        flex-direction: column;
+        align-items: center;
+        padding: 8vw 4vw;
+        gap: 8vw 0;
+    }
+    .itemLogo {
+        width: 10rem;
+        svg {
+            aspect-ratio: 101/142;
+            fill: $pure-black;
+        }
+    }
+    .copyright {
+        @include poppins;
+        font-weight: 300;
+        font-size: fz(14);
+        margin-right: auto;
+        margin-left: 6rem;
+        @include sp {
+            order: 1;
+            align-self: center;
+            margin: unset;
+        }
+    }
+    nav {
+        font-size: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em 0;
+        @include sp {
+            display: none;
+        }
+        a {
+            font-size: fz(16);
+            @include poppins;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+    .boxShopInfo {
+        position: relative;
+        font-size: inherit;
+        display: flex;
+        flex-direction: column;
+        address {
+            font-size: fz(14);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5em;
+        }
+        .tel,
+        .fax {
+            font-size: fz(16);
+            @include poppins;
+            font-weight: 500;
+            line-height: 1.4em;
+        }
+        .itemMap,
+        .itemMail {
+            font-size: fz(16);
+            @include poppins;
+            font-weight: 500;
+        }
+        .itemMap {
+            text-decoration: underline;
+        }
+        & > div {
+            font-size: inherit;
+            display: flex;
+            align-items: center;
+            margin-top: 0.2em;
+            gap: 0 4em;
+        }
+    }
+}

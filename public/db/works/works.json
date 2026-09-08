@@ -1,0 +1,121 @@
+{
+  "categories": [
+    {
+      "id": "renovation",
+      "label": "RENOVATION",
+      "labelJp": "リノベーション",
+      "items": [
+        {
+          "id": "001",
+          "location": "福岡市中央区",
+          "name": "株式会社ハーバルアイ",
+          "thumbnail": "/db/works/images/260406/img_007.jpg",
+          "images": [
+            "/db/works/images/260406/img_001.jpg",
+            "/db/works/images/260406/img_002.jpg",
+            "/db/works/images/260406/img_003.jpg",
+            "/db/works/images/260406/img_004.jpg",
+            "/db/works/images/260406/img_005.jpg",
+            "/db/works/images/260406/img_006.jpg",
+            "/db/works/images/260406/img_007.jpg",
+            "/db/works/images/260406/img_008.jpg",
+            "/db/works/images/260406/img_009.jpg",
+            "/db/works/images/260406/img_010.jpg",
+            "/db/works/images/260406/img_011.jpg",
+            "/db/works/images/260406/img_012.jpg",
+            "/db/works/images/260406/img_013.jpg",
+            "/db/works/images/260406/img_014.jpg",
+            "/db/works/images/260406/img_015.jpg",
+            "/db/works/images/260406/img_016.jpg",
+            "/db/works/images/260406/img_017.jpg",
+            "/db/works/images/260406/img_018.jpg",
+            "/db/works/images/260406/img_019.jpg",
+            "/db/works/images/260406/img_020.jpg",
+            "/db/works/images/260406/img_021.jpg",
+            "/db/works/images/260406/img_022.jpg",
+            "/db/works/images/260406/img_023.jpg",
+            "/db/works/images/260406/img_024.jpg"
+          ]
+        },
+        {
+          "id": "002",
+          "location": "熊本市中央区",
+          "name": "B様邸",
+          "thumbnail": "/images/_dummy/hero.webp",
+          "images": ["/images/_dummy/hero.webp", "/images/_dummy/hero.webp"]
+        },
+        {
+          "id": "003",
+          "location": "熊本市中央区",
+          "name": "C様邸",
+          "thumbnail": "/images/_dummy/hero.webp",
+          "images": ["/images/_dummy/hero.webp"]
+        },
+        {
+          "id": "004",
+          "location": "熊本市西区",
+          "name": "D様邸",
+          "thumbnail": "/images/_dummy/hero.webp",
+          "images": ["/images/_dummy/hero.webp", "/images/_dummy/hero.webp"]
+        },
+        {
+          "id": "005",
+          "name": "E様邸",
+          "thumbnail": "/images/_dummy/hero.webp",
+          "images": ["/images/_dummy/hero.webp"]
+        }
+      ]
+    },
+    {
+      "id": "new-construction",
+      "label": "NEW\nCONSTRUCTION",
+      "labelJp": "新築",
+      "items": [
+        {
+          "id": "001",
+          "location": "熊本市南区",
+          "name": "F様邸",
+          "thumbnail": "/images/_dummy/hero.webp",
+          "images": ["/images/_dummy/hero.webp", "/images/_dummy/hero.webp"]
+        },
+        {
+          "id": "002",
+          "location": "熊本市北区",
+          "name": "G様邸",
+          "thumbnail": "/images/_dummy/hero.webp",
+          "images": ["/images/_dummy/hero.webp", "/images/_dummy/hero.webp"]
+        }
+      ]
+    },
+    {
+      "id": "store-office",
+      "label": "STORE OFFICE",
+      "labelJp": "店舗・オフィス",
+      "items": [
+        {
+          "id": "001",
+          "location": "熊本市中央区",
+          "name": "株式会社 熊本グループ社",
+          "thumbnail": "/images/_dummy/hero.webp",
+          "images": [
+            "/images/_dummy/hero.webp",
+            "/images/_dummy/hero.webp",
+            "/images/_dummy/hero.webp"
+          ]
+        },
+        {
+          "id": "002",
+          "name": "herbal-d dim",
+          "thumbnail": "/images/_dummy/hero.webp",
+          "images": ["/images/_dummy/hero.webp", "/images/_dummy/hero.webp"]
+        },
+        {
+          "id": "003",
+          "name": "i-lads",
+          "thumbnail": "/images/_dummy/hero.webp",
+          "images": ["/images/_dummy/hero.webp"]
+        }
+      ]
+    }
+  ]
+}

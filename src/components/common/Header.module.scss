@@ -1,0 +1,107 @@
+/* =================================
+ * 	株式会社 雄建 HEADER
+ * ================================= */
+@use "../../styles/foundation" as *;
+.containerHeader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    height: 1px;
+    .blockMenu {
+        font-size: inherit;
+        width: 100%;
+        background-color: $main-gray;
+        color: $pure-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        --box-height: 57rem;
+        height: var(--box-height);
+        translate: 0 calc(-1 * var(--box-height));
+        @include sp {
+            --box-height: 60vh;
+        }
+        nav {
+            font-size: inherit;
+            display: flex;
+            gap: 0 2em;
+            @include sp {
+                flex-direction: column;
+                gap: 3vw 0;
+            }
+            a {
+                @include poppins;
+                font-weight: 400;
+                text-transform: uppercase;
+                font-size: fz(24);
+                letter-spacing: 0.3em;
+            }
+        }
+    }
+}
+.menuOpen {
+    translate: 0 !important;
+    transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.menuClosing {
+    transition: 0.2s ease-out;
+}
+
+/* --------------------
+ * 	ハンバーガーボタン
+ * -------------------- */
+.hamburgerButton {
+    --box-width: 8rem;
+    position: fixed;
+    top: 3.5rem;
+    right: 3.2rem;
+    width: var(--box-width);
+    z-index: 400;
+    height: 2.2rem;
+    @include sp {
+        --box-width: 10vw;
+        top: 4vw;
+        right: 4vw;
+    }
+    span {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: var(--box-width);
+        height: 1px;
+        background-color: #d9d9d9;
+        transition: 0.3s ease-out;
+        &:nth-of-type(1) {
+            clip-path: inset(0 0 0 40%);
+            translate: 0 calc(-50% + 1rem);
+            @include sp {
+                translate: 0 calc(-50% + 1.5vw);
+            }
+        }
+        &:nth-of-type(2) {
+            translate: 0 calc(-50% - 1rem);
+            @include sp {
+                translate: 0 calc(-50% - 1.5vw);
+            }
+        }
+    }
+}
+.hamburgerOpen {
+    span {
+        &:nth-of-type(1) {
+            translate: 0 -50%;
+            rotate: -15deg;
+            clip-path: inset(0);
+        }
+        &:nth-of-type(2) {
+            translate: 0 -50%;
+            rotate: 15deg;
+        }
+    }
+}
+
+/* モーダル展開中はハンバーガーボタンを非表示 */
+:global(body.modal-open) .hamburgerButton {
+    display: none;
+}

@@ -1,0 +1,34 @@
+@use "./svg" as *;
+@use "./colors" as *;
+@use "./breakpoints" as *;
+
+/* =========================================
+ドロップシャドウ
+----------------------------------------- */
+@mixin drop-shadow {
+    box-shadow: 2px 2px 3px 0 rgb(53 45 32 / 15%);
+}
+@mixin flex-center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+}
+@mixin border-gradient {
+    background-image: repeating-linear-gradient(
+        to right,
+        transparent 0,
+        transparent 159px,
+        #efefef 159px,
+        #efefef 160px
+    );
+    @include sp {
+        background-image: repeating-linear-gradient(
+            to right,
+            transparent 0,
+            transparent 25vw,
+            #efefef 25vw,
+            #efefefca calc(25vw + 1px)
+        );
+    }
+}

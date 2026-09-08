@@ -40,3 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 AGENTS.md
+
+
+# works内画像
+public/db/works/images/
