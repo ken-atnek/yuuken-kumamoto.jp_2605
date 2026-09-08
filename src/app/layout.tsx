@@ -10,7 +10,7 @@ import '@/styles/globals.scss';
 import SvgDefs from '@/components/SvgDefs';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
-import { isRealProduction } from '@/lib/env';
+import { isRealProduction, metadataBase } from '@/lib/env';
 import { Noto_Sans_JP } from 'next/font/google';
 import localFont from 'next/font/local';
 
@@ -53,13 +53,6 @@ const poppins = localFont({
   display: 'swap',
 });
 
-// 本番のみ metadataBase を設定
-const metadataBase = isRealProduction
-  ? new URL(
-      process.env.NEXT_PUBLIC_METADATA_BASE || 'https://yuuken-kumamoto.jp/'
-    )
-  : undefined;
-
 export const metadata: Metadata = {
   ...(isRealProduction && {
     metadataBase,
@@ -91,7 +84,6 @@ export const metadata: Metadata = {
       },
       // { url: '/favicon/favicon.ico', type: 'image/x-icon' },
     ],
-    apple: [{ url: '/favicon/apple-touch-icon.png', sizes: '180x180' }],
   },
 };
 
@@ -101,7 +93,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${notoSansJp.variable} ${poppins.variable}`} data-scroll-behavior="smooth">
+    <html
+      lang="ja"
+      className={`${notoSansJp.variable} ${poppins.variable}`}
+      data-scroll-behavior="smooth"
+    >
       <head>
         <meta
           name="format-detection"

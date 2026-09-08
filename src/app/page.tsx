@@ -17,8 +17,10 @@ export const generateMetadata = (): Metadata => {
   return {
     title: '株式会社 雄建｜熊本県上益城郡益城町の建築工事',
     description: isRealProduction
-      ? '熊本県上益城郡益城町で建築工事、大工工事、屋根工事、タイル・ブロツク工事、内装仕上工事、などの建設工事を行っております。'
+      ? '熊本県上益城郡益城町で建築工事、大工工事、屋根工事、タイル・ブロック工事、内装仕上工事などの建設工事を行っております。'
       : undefined,
+    alternates: isRealProduction ? { canonical: '/' } : undefined,
+    openGraph: isRealProduction ? { url: '/' } : undefined,
   };
 };
 export default function Home() {

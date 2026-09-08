@@ -1,51 +1,55 @@
 # ページ構成メモ
 
-スクリーンショット参照: `docs/screenshots/`
+## 共通
+
+- Header
+- Footer
+- SVGスプライト: `src/components/SvgDefs.tsx`
+- グローバルスタイル: `src/styles/globals.scss`
 
 ---
 
-## 商品ページ `/roots/?id=roots_001`
+## トップページ `/`
 
-参照: `PRODUCTS.jpg`
+| # | セクション | 主なファイル | 内容 |
+|---|---|---|---|
+| 1 | Hero | `src/components/Top/ContainerHero.tsx` | ファーストビュー、ロゴ、メインビジュアル |
+| 2 | Concept | `src/components/Top/ContainerConcept.tsx` | コンセプト |
+| 3 | Works | `src/components/Top/ContainerWorks.tsx` | 施工事例の一部表示、`/works/` への導線 |
+| 4 | About | `src/components/Top/ContainerAbout.tsx` | 会社情報・関連リンク |
+| 5 | Contact | `src/components/Top/ContainerContact.tsx` | 問い合わせ導線 |
 
-| # | セクション | 内容 |
-|---|-----------|------|
-| 1 | Header | SPICEロゴ + ナビ |
-| 2 | Hero | 人物写真 + テキスト（複数行） |
-| 3 | 人物情報 | 肩書き・名前 |
-| 4 | ページ共通テキスト | `common.json` の `pageText` |
-| 5 | WEB STORE ボタン | `common.json` の `onlineShopUrl` |
-| 6 | **CRAFT** | セクション見出し |
-| 7 | 商品アイテム × 複数 | 画像 + タイトル + テキスト（`productPage.json` の `items`） |
-| 8 | **STORY** | 人物写真 + ストーリーページへのリンク |
-| 9 | **INFO** | 店名・住所・営業時間・TEL・求人 |
-| 10 | **EVENT** | イベント写真 + タイトル + テキスト（`isVisible` で表示切替） |
-| 11 | WEB STORE ボタン | 再掲 |
-| 12 | Footer | SPICEロゴ |
+ナビゲーション:
 
----
+- `/`
+- `/#ContainerConcept`
+- `/works/`
+- `/#ContainerAbout`
+- `/#ContainerContact`
 
-## ストーリーページ `/roots/?id=roots_001&page=story`
-
-参照: `SOTRY.jpg`
-
-| # | セクション | 内容 |
-|---|-----------|------|
-| 1 | Header | SPICEロゴ + ナビ |
-| 2 | Hero | 人物写真 + テキスト（複数行） |
-| 3 | 人物情報 | 肩書き・名前 |
-| 4 | **STORY** セクション × 複数 | 各セクション: 写真 + タイトル + テキスト（`storyPage.json` の `sections`） |
-| 5 | WEB STORE ボタン | `common.json` の `onlineShopUrl` |
-| 6 | **INFO** | 店名・住所・営業時間・TEL・求人 |
-| 7 | **EVENT** | イベント写真 + タイトル + テキスト（`isVisible` で表示切替） |
-| 8 | WEB STORE ボタン | 再掲 |
-| 9 | Footer | SPICEロゴ |
+トップページ内アンカーは同一ページ内の移動なので、原則 sitemap には含めない。
 
 ---
 
-## 両ページ共通セクション
+## 施工事例ページ `/works/`
 
-- Header / Footer
-- INFO（`info.json`）
-- EVENT（`events.json`、`isVisible: false` で非表示）
-- WEB STORE ボタン（`common.json` の `onlineShopUrl`）
+| # | セクション | 主なファイル | 内容 |
+|---|---|---|---|
+| 1 | 見出し | `src/app/works/page.tsx` | `WORKS` 見出し |
+| 2 | 施工事例一覧 | `src/components/Works/WorksList.tsx` | カテゴリ別の施工事例一覧 |
+| 3 | モーダル | `src/components/Works/WorksModal.tsx` | 施工事例画像の詳細表示 |
+
+データ:
+
+- `public/db/works/works.json`
+- 型定義: `src/types/works.ts`
+- 仕様: `docs/WORKS_SPEC.md`
+
+---
+
+## SEO対象ページ
+
+- `/`
+- `/works/`
+
+`sitemap.ts` もこの2ページを基本対象とする。

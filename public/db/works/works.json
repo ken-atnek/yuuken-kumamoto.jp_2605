@@ -7,62 +7,37 @@
       "items": [
         {
           "id": "001",
-          "location": "福岡市中央区",
-          "name": "株式会社ハーバルアイ",
-          "thumbnail": "/db/works/images/260406/img_007.jpg",
+          "location": "熊本市",
+          "name": "Kビル :集合住宅",
+          "thumbnail": "/db/works/images/renovation/01/01.webp",
           "images": [
-            "/db/works/images/260406/img_001.jpg",
-            "/db/works/images/260406/img_002.jpg",
-            "/db/works/images/260406/img_003.jpg",
-            "/db/works/images/260406/img_004.jpg",
-            "/db/works/images/260406/img_005.jpg",
-            "/db/works/images/260406/img_006.jpg",
-            "/db/works/images/260406/img_007.jpg",
-            "/db/works/images/260406/img_008.jpg",
-            "/db/works/images/260406/img_009.jpg",
-            "/db/works/images/260406/img_010.jpg",
-            "/db/works/images/260406/img_011.jpg",
-            "/db/works/images/260406/img_012.jpg",
-            "/db/works/images/260406/img_013.jpg",
-            "/db/works/images/260406/img_014.jpg",
-            "/db/works/images/260406/img_015.jpg",
-            "/db/works/images/260406/img_016.jpg",
-            "/db/works/images/260406/img_017.jpg",
-            "/db/works/images/260406/img_018.jpg",
-            "/db/works/images/260406/img_019.jpg",
-            "/db/works/images/260406/img_020.jpg",
-            "/db/works/images/260406/img_021.jpg",
-            "/db/works/images/260406/img_022.jpg",
-            "/db/works/images/260406/img_023.jpg",
-            "/db/works/images/260406/img_024.jpg"
+            "/db/works/images/renovation/01/01.webp",
+            "/db/works/images/renovation/01/02.webp",
+            "/db/works/images/renovation/01/03.webp"
           ]
         },
         {
           "id": "002",
-          "location": "熊本市中央区",
-          "name": "B様邸",
-          "thumbnail": "/images/_dummy/hero.webp",
-          "images": ["/images/_dummy/hero.webp", "/images/_dummy/hero.webp"]
+          "location": "熊本市",
+          "name": "T様邸. :マンション",
+          "thumbnail": "/db/works/images/renovation/02/01.webp",
+          "images": [
+            "/db/works/images/renovation/02/01.webp",
+            "/db/works/images/renovation/02/02.webp",
+            "/db/works/images/renovation/02/03.webp",
+            "/db/works/images/renovation/02/04.webp"
+          ]
         },
         {
           "id": "003",
-          "location": "熊本市中央区",
-          "name": "C様邸",
-          "thumbnail": "/images/_dummy/hero.webp",
-          "images": ["/images/_dummy/hero.webp"]
-        },
-        {
-          "id": "004",
-          "location": "熊本市西区",
-          "name": "D様邸",
-          "thumbnail": "/images/_dummy/hero.webp",
-          "images": ["/images/_dummy/hero.webp", "/images/_dummy/hero.webp"]
-        },
-        {
-          "id": "005",
-          "name": "E様邸",
-          "thumbnail": "/images/_dummy/hero.webp",
-          "images": ["/images/_dummy/hero.webp"]
+          "location": "熊本市",
+          "name": "T様邸 :専用住宅",
+          "thumbnail": "/db/works/images/renovation/03/01.webp",
+          "images": [
+            "/db/works/images/renovation/03/01.webp",
+            "/db/works/images/renovation/03/02.webp",
+            "/db/works/images/renovation/03/03.webp"
+          ]
         }
       ]
     },
@@ -73,17 +48,50 @@
       "items": [
         {
           "id": "001",
-          "location": "熊本市南区",
-          "name": "F様邸",
-          "thumbnail": "/images/_dummy/hero.webp",
-          "images": ["/images/_dummy/hero.webp", "/images/_dummy/hero.webp"]
+          "location": "益城町",
+          "name": "M様邸 :併用住宅",
+          "thumbnail": "/db/works/images/new-construction/01/01.webp",
+          "images": [
+            "/db/works/images/new-construction/01/01.webp",
+            "/db/works/images/new-construction/01/02.webp",
+            "/db/works/images/new-construction/01/03.webp",
+            "/db/works/images/new-construction/01/04.webp",
+            "/db/works/images/new-construction/01/05.webp",
+            "/db/works/images/new-construction/01/06.webp",
+            "/db/works/images/new-construction/01/07.webp"
+          ]
         },
         {
           "id": "002",
-          "location": "熊本市北区",
-          "name": "G様邸",
-          "thumbnail": "/images/_dummy/hero.webp",
-          "images": ["/images/_dummy/hero.webp", "/images/_dummy/hero.webp"]
+          "location": "御船町",
+          "name": "イチニコ食堂 :飲食店",
+          "thumbnail": "/db/works/images/new-construction/02/01.webp",
+          "images": [
+            "/db/works/images/new-construction/02/01.webp",
+            "/db/works/images/new-construction/02/02.webp",
+            "/db/works/images/new-construction/02/03.webp",
+            "/db/works/images/new-construction/02/04.webp"
+          ]
+        },
+        {
+          "id": "003",
+          "location": "山鹿市",
+          "name": "露天湯椛白暖簾 :宿泊棟",
+          "thumbnail": "/db/works/images/new-construction/03/02.webp",
+          "images": [
+            "/db/works/images/new-construction/03/01.webp",
+            "/db/works/images/new-construction/03/02.webp",
+            "/db/works/images/new-construction/03/03.webp",
+            "/db/works/images/new-construction/03/04.webp",
+            "/db/works/images/new-construction/03/05.webp",
+            "/db/works/images/new-construction/03/06.webp",
+            "/db/works/images/new-construction/03/07.webp",
+            "/db/works/images/new-construction/03/08.webp",
+            "/db/works/images/new-construction/03/09.webp",
+            "/db/works/images/new-construction/03/10.webp",
+            "/db/works/images/new-construction/03/11.webp",
+            "/db/works/images/new-construction/03/12.webp"
+          ]
         }
       ]
     },
@@ -94,26 +102,41 @@
       "items": [
         {
           "id": "001",
-          "location": "熊本市中央区",
-          "name": "株式会社 熊本グループ社",
-          "thumbnail": "/images/_dummy/hero.webp",
+          "location": "熊本市",
+          "name": "エムグランデ:飲食店",
+          "thumbnail": "/db/works/images/store-office/01/01.webp",
           "images": [
-            "/images/_dummy/hero.webp",
-            "/images/_dummy/hero.webp",
-            "/images/_dummy/hero.webp"
+            "/db/works/images/store-office/01/01.webp",
+            "/db/works/images/store-office/01/02.webp",
+            "/db/works/images/store-office/01/03.webp",
+            "/db/works/images/store-office/01/04.webp",
+            "/db/works/images/store-office/01/05.webp",
+            "/db/works/images/store-office/01/06.webp",
+            "/db/works/images/store-office/01/07.webp",
+            "/db/works/images/store-office/01/08.webp",
+            "/db/works/images/store-office/01/09.webp",
+            "/db/works/images/store-office/01/10.webp",
+            "/db/works/images/store-office/01/11.webp",
+            "/db/works/images/store-office/01/12.webp"
           ]
         },
         {
           "id": "002",
-          "name": "herbal-d dim",
-          "thumbnail": "/images/_dummy/hero.webp",
-          "images": ["/images/_dummy/hero.webp", "/images/_dummy/hero.webp"]
-        },
-        {
-          "id": "003",
-          "name": "i-lads",
-          "thumbnail": "/images/_dummy/hero.webp",
-          "images": ["/images/_dummy/hero.webp"]
+          "location": "東京都中央区",
+          "name": "ラウンジ中村:飲食店",
+          "thumbnail": "/db/works/images/store-office/02/01.webp",
+          "images": [
+            "/db/works/images/store-office/02/01.webp",
+            "/db/works/images/store-office/02/02.webp",
+            "/db/works/images/store-office/02/03.webp",
+            "/db/works/images/store-office/02/04.webp",
+            "/db/works/images/store-office/02/05.webp",
+            "/db/works/images/store-office/02/06.webp",
+            "/db/works/images/store-office/02/07.webp",
+            "/db/works/images/store-office/02/08.webp",
+            "/db/works/images/store-office/02/09.webp",
+            "/db/works/images/store-office/02/10.webp"
+          ]
         }
       ]
     }
