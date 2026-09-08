@@ -42,7 +42,11 @@
 
 ## Codex側の作業記録ルール
 
+このテンプレートを使って外部レビュー依頼を行う場合は、`docs/review/REVIEW_REQUEST_YYYY-MM-DD.md` を作成する。
+
 レビュー結果を受けてCodex側で対応する場合は、`docs/review/REVIEW_YYYY-MM-DD.md` を作成または更新する。
+
+外部レビュー指摘の対応状況は、`docs/review/REVIEW_FIX_TRACKER_TEMPLATE.md` を元に、`docs/review/REVIEW_FIX_TRACKER_YYYY-MM-DD.md` で管理する。
 
 レビューmdには冒頭に `進捗サマリー` を置き、以下のステータスで作業状況を見える化する。
 
