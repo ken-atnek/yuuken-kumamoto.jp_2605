@@ -21,7 +21,7 @@
 - `control.yamagarotenyu-momiji.com` のmdを参考に、雄建用の引き渡しメモとレビュー管理mdを追加
 - `docs/BACKEND_HANDOFF.md`
 - `docs/review/REVIEW_REQUEST_TEMPLATE.md`
-- `docs/review/REVIEW_FIX_TRACKER.md`
+- `docs/review/REVIEW_FIX_TRACKER_TEMPLATE.md`
 
 ### 注意
 
@@ -36,7 +36,11 @@
 
 ### レビュー作業ルーティン
 
+- `AGENTS.md` 上では `レビュー運用ルール` としてまとめ、`レビュー作業ルーティン` と `外部レビュー指摘への対応方針` を同じ親項目の中で管理する
+- `管理画面 / DB連携の引き渡し` とは役割が違うため、レビュー関連ルールは混ぜずに分ける
 - プログラムチェック、公開前チェック、Claudeなどの外部レビュー後の対応では、`docs/review/REVIEW_YYYY-MM-DD.md` を作成または更新する
+- 外部レビュー依頼時は `docs/review/REVIEW_REQUEST_TEMPLATE.md` を元に、`docs/review/REVIEW_REQUEST_YYYY-MM-DD.md` を作成する
+- 外部レビュー指摘の対応状況は `docs/review/REVIEW_FIX_TRACKER_TEMPLATE.md` を元に、`docs/review/REVIEW_FIX_TRACKER_YYYY-MM-DD.md` で管理する
 - レビューmdの冒頭には `進捗サマリー` を置き、`✅` / `⏳` / `⚠️` / `⬜` で作業状況が見えるようにする
 - 対応した項目はレビューmd側も更新し、ユーザーが作業感と残タスクを追えるようにする
 
