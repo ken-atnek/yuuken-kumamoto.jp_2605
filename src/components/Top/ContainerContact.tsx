@@ -6,14 +6,13 @@
  * Last updated: 2026-04-04
  * ======================================= */
 'use client';
-import ExternalLink from '@/components/common/ExternalLink';
 import styles from '@/styles/PageTop.module.scss';
 import clsx from 'clsx';
 import Modal from '@/components/Modal';
 import type { ReactNode } from 'react';
 import { useState, useRef } from 'react';
 
-const endpoint = 'https://demo-qun-kumamoto.tuna-pic.co.jp/backend/contact.php';
+const endpoint = '/backend/contact.php';
 
 type ContactApiResponse =
   | { success: true; message?: string }
@@ -224,7 +223,7 @@ export default function ContainerContact() {
   return (
     <>
       <section className={styles.containerContact} id="ContainerContact">
-        <h2>contact</h2>
+        <h2>contact･recruit</h2>
         <form
           ref={formRef}
           className={styles.blockForm}
@@ -232,7 +231,9 @@ export default function ContainerContact() {
           onSubmit={isConfirming ? handleSubmit : handleConfirm}
         >
           <p className={styles.headAnnounce}>
-            お問い合わせは下記フォームよりご連絡ください。
+            業務ご依頼のお問い合わせ、求人に関するお問い合わせは
+            <br />
+            下記フォームよりご連絡ください。
             <br />
             メールまたはお電話にて3営業日以内にご連絡させていただきます。
           </p>

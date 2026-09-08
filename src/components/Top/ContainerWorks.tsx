@@ -17,8 +17,17 @@ export default function ContainerWorks() {
 
   useEffect(() => {
     fetch('/db/works/works.json', { cache: 'no-store' })
-      .then((res) => res.json())
-      .then((json: WorksData) => setData(json));
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed to load works data: ${res.status}`);
+        }
+
+        return res.json();
+      })
+      .then((json: WorksData) => setData(json))
+      .catch((error) => {
+        console.error(error);
+      });
   }, []);
 
   if (!data) return null;
@@ -28,8 +37,11 @@ export default function ContainerWorks() {
       <h2>works</h2>
       <article className={styles.categoryList}>
         {data.categories.map((category) => {
-          const thumb1 = category.items[0]?.thumbnail;
-          const thumb2 = category.items[1]?.thumbnail;
+          const sortedItems = [...category.items].sort((a, b) =>
+            b.id.localeCompare(a.id, undefined, { numeric: true })
+          );
+          const thumb1 = sortedItems[0]?.thumbnail;
+          const thumb2 = sortedItems[1]?.thumbnail;
 
           return (
             <div key={category.id} className={styles.blockCategory}>
@@ -39,7 +51,7 @@ export default function ContainerWorks() {
                   {thumb1 && (
                     <Image
                       src={thumb1}
-                      alt={category.items[0].name}
+                      alt={sortedItems[0].name}
                       width={600}
                       height={400}
                       style={{
@@ -54,7 +66,7 @@ export default function ContainerWorks() {
                   {thumb2 && (
                     <Image
                       src={thumb2}
-                      alt={category.items[1].name}
+                      alt={sortedItems[1].name}
                       width={600}
                       height={400}
                       style={{

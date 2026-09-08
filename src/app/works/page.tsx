@@ -15,6 +15,8 @@ export const generateMetadata = (): Metadata => {
     description: isRealProduction
       ? '株式会社 雄建の施工実績です。リノベーション・新築・店舗オフィスなど、熊本を中心に多くの物件を手がけています。'
       : undefined,
+    alternates: isRealProduction ? { canonical: '/works/' } : undefined,
+    openGraph: isRealProduction ? { url: '/works/' } : undefined,
   };
 };
 

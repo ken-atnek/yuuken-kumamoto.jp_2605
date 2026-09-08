@@ -21,8 +21,17 @@ export default function WorksList() {
 
   useEffect(() => {
     fetch('/db/works/works.json', { cache: 'no-store' })
-      .then((res) => res.json())
-      .then((json: WorksData) => setData(json));
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed to load works data: ${res.status}`);
+        }
+
+        return res.json();
+      })
+      .then((json: WorksData) => setData(json))
+      .catch((error) => {
+        console.error(error);
+      });
   }, []);
 
   if (!data) return null;
@@ -46,32 +55,42 @@ export default function WorksList() {
 
             {category.items.length > 0 && (
               <ul className={styles.itemGrid}>
-                {category.items.map((item, itemIndex) => (
-                  <li key={item.id}>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setSelectedItem(item);
-                        setSelectedCategory(category);
-                      }}
-                    >
-                      <Image
-                        src={item.thumbnail}
-                        alt={item.name}
-                        width={600}
-                        height={400}
-                        priority={categoryIndex === 0 && itemIndex === 0}
-                        loading={categoryIndex === 0 && itemIndex === 0 ? 'eager' : 'lazy'}
-                      />
-                      <div className={styles.itemMeta}>
-                        {item.location && (
-                          <p className={styles.itemLocation}>{item.location}</p>
-                        )}
-                        <p className={styles.itemName}>{item.name}</p>
-                      </div>
-                    </button>
-                  </li>
-                ))}
+                {[...category.items]
+                  .sort((a, b) =>
+                    b.id.localeCompare(a.id, undefined, { numeric: true })
+                  )
+                  .map((item, itemIndex) => (
+                    <li key={item.id}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelectedItem(item);
+                          setSelectedCategory(category);
+                        }}
+                      >
+                        <Image
+                          src={item.thumbnail}
+                          alt={item.name}
+                          width={600}
+                          height={400}
+                          priority={categoryIndex === 0 && itemIndex === 0}
+                          loading={
+                            categoryIndex === 0 && itemIndex === 0
+                              ? 'eager'
+                              : 'lazy'
+                          }
+                        />
+                        <div className={styles.itemMeta}>
+                          {item.location && (
+                            <p className={styles.itemLocation}>
+                              {item.location}
+                            </p>
+                          )}
+                          <p className={styles.itemName}>{item.name}</p>
+                        </div>
+                      </button>
+                    </li>
+                  ))}
               </ul>
             )}
           </div>

@@ -1,8 +1,9 @@
-## Next.js 15 App Router の制約
+## Next.js 16 App Router の制約
 
 ### params は Promise型を使う（同期型は型エラーになる）
 
-**Next.js 15 では `output: 'export'` であっても、型制約として `params: Promise<...>` が必須。**  
+**Next.js 16 では `output: 'export'` であっても、`params` が Promise 扱いになる場合がある。**
+
 ビルド時に静的生成されるため `await params` は問題なく動作する。
 
 #### ✅ 正しい書き方（静的エクスポートでも同じ）
@@ -27,21 +28,25 @@ export default function Page({ params }: { params: { id: string } }) {
 
 ### generateMetadata / generateStaticParams
 
-**静的エクスポート時は async 禁止**
+**不要に複雑化しない**
 
-#### ❌ NG
+`async` 自体は禁止ではない。非同期処理が必要な場合は `async` を使ってよい。
+
+#### 非同期処理がある場合
 
 ```typescript
 export async function generateMetadata(): Promise<Metadata> {
-  return { title: "Page" };
+  const data = await getData();
+  return { title: data.title };
 }
 
 export async function generateStaticParams() {
-  return [{ id: "1" }];
+  const items = await getItems();
+  return items.map((item) => ({ id: item.id }));
 }
 ```
 
-#### ✅ OK
+#### 非同期処理がない場合
 
 ```typescript
 export function generateMetadata(): Metadata {
@@ -53,4 +58,4 @@ export function generateStaticParams() {
 }
 ```
 
-**理由**: `output: 'export'` 時は全て事前生成されるため、非同期処理は不要
+**方針**: 非同期処理がなければ `async` は付けない。`output: 'export'` 時はビルド時依存を増やしすぎず、必要な箇所だけで使う。

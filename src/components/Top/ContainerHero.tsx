@@ -16,7 +16,7 @@ export default function ContainerHero() {
       <div className={styles.itemImage}>
         <Image
           alt="雄建のトップ画像"
-          src="/images/_dummy/hero.webp"
+          src="/images/hero.webp"
           width={1680}
           height={768}
           priority

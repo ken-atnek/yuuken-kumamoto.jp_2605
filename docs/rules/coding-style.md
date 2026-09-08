@@ -24,15 +24,16 @@
 
 ### ファイル種別ごとの命名規則
 
-| ファイル | 命名規則          | 例                                                   |
-| -------- | ----------------- | ---------------------------------------------------- |
-| `.scss`  | ケバブケース      | `.my-button`, `$primary-color`, `@mixin flex-center` |
-| `.tsx`   | キャメル/パスカル | `MyComponent`, `useState`, `handleClick`             |
+| 対象 | 命名規則 | 例 |
+|---|---|---|
+| CSS Modules のクラス | キャメルケース | `.containerWorks`, `.itemImage` |
+| SCSS変数 / ミックスイン | ケバブケース | `$primary-color`, `@mixin flex-center` |
+| TS / TSX | キャメル/パスカル | `MyComponent`, `useState`, `handleClick` |
 
-**理由**: SCSSとTSXで命名規則を混在させない（可読性・保守性向上）
+**理由**: CSS Modules は `styles.containerWorks` のように参照する既存実装へ合わせる。
 
-### Rootsコンポーネントのクラス命名
+### コンポーネントのクラス命名
 
-- `src/components/roots` 配下では、親ラッパークラスを `root` にしない
 - 親ラッパーはコンポーネント名ベースのキャメルケースに統一する
-- 例: `RootsHero.tsx` は `styles.rootsHero`、SCSS側は `.rootsHero {}`
+- 例: `ContainerWorks.tsx` は `styles.containerWorks`、SCSS側は `.containerWorks {}`
+- 汎用的すぎる `root` / `wrapper` / `inner` だけの命名は避ける

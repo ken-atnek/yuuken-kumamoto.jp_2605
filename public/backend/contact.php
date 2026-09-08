@@ -93,12 +93,12 @@ foreach ([$name, $furigana, $email] as $v) {
 // ------------------------------
 // メール設定
 // ------------------------------
-$to = 'ken.atnek@gmail.com';        // テスト
-// $to = 'qun@kind.ocn.ne.jp';      // 本番
+// $to = 'ken.atnek@gmail.com';       // テスト
+$to = 'info@yuuken-kumamoto.jp';      // 本番
 $to_name = '株式会社 雄建';
 
 $from_name  = '株式会社雄建 お問い合わせ';
-$from_email = 'contact@demo-yuuken-kumamoto.tuna-pic.co.jp'; // 送信元（この環境に合わせる）
+$from_email = 'info@yuuken-kumamoto.jp'; // 送信元（この環境に合わせる）
 
 $send_date = date('Y/n/j H:i');
 
