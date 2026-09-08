@@ -32,11 +32,15 @@ export default function ContainerWorks() {
 
   if (!data) return null;
 
+  const visibleCategories = data.categories.filter(
+    (category) => category.items.length > 0
+  );
+
   return (
     <section className={styles.containerWorks}>
       <h2>works</h2>
       <article className={styles.categoryList}>
-        {data.categories.map((category) => {
+        {visibleCategories.map((category) => {
           const sortedItems = [...category.items].sort((a, b) =>
             b.id.localeCompare(a.id, undefined, { numeric: true })
           );

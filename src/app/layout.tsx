@@ -68,6 +68,10 @@ export const metadata: Metadata = {
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['/ogp.jpg'],
+    },
   }),
   robots: isRealProduction ? 'index, follow' : 'noindex, nofollow',
   icons: {

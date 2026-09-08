@@ -211,7 +211,7 @@
             cursor: pointer;
             opacity: 0.45;
             transition: opacity 0.2s;
-            &:hover {
+            @include hover {
                 opacity: 0.7;
             }
         }
