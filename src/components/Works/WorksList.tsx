@@ -36,10 +36,14 @@ export default function WorksList() {
 
   if (!data) return null;
 
+  const visibleCategories = data.categories.filter(
+    (category) => category.items.length > 0
+  );
+
   return (
     <>
       <article>
-        {data.categories.map((category, categoryIndex) => (
+        {visibleCategories.map((category, categoryIndex) => (
           <div key={category.id} className={styles.categorySection}>
             <div className={styles.categoryHeader}>
               <h3 className={styles.categoryLabel}>

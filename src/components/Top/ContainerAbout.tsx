@@ -14,8 +14,8 @@ export default function ContainerAbout() {
       <h2>about</h2>
       <article>
         <div className={styles.itemLogo}>
-          <svg role="img" aria-labelledby="logoTitle">
-            <title id="logoTitle">株式会社 雄建</title>
+          <svg role="img" aria-labelledby="logoTitleAbout">
+            <title id="logoTitleAbout">株式会社 雄建</title>
             <use href="#svg_logo" />
           </svg>
         </div>

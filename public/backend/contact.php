@@ -93,7 +93,6 @@ foreach ([$name, $furigana, $email] as $v) {
 // ------------------------------
 // メール設定
 // ------------------------------
-// $to = 'ken.atnek@gmail.com';       // テスト
 $to = 'info@yuuken-kumamoto.jp';      // 本番
 $to_name = '株式会社 雄建';
 

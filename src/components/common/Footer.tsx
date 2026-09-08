@@ -11,8 +11,8 @@ const Footer = () => {
   return (
     <footer className={styles.containerFooter}>
       <div className={styles.itemLogo}>
-        <svg role="img" aria-labelledby="logoTitle">
-          <title id="logoTitle">株式会社 雄建</title>
+        <svg role="img" aria-labelledby="logoTitleFooter">
+          <title id="logoTitleFooter">株式会社 雄建</title>
           <use href="#svg_logo" />
         </svg>
       </div>

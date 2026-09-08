@@ -25,8 +25,8 @@ export default function ContainerHero() {
       </div>
       <article>
         <div className={styles.itemLogo}>
-          <svg role="img" aria-labelledby="logoTitle">
-            <title id="logoTitle">株式会社 雄建</title>
+          <svg role="img" aria-labelledby="logoTitleHero">
+            <title id="logoTitleHero">株式会社 雄建</title>
             <use href="#svg_logo" />
           </svg>
         </div>

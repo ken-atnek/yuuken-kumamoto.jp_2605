@@ -1,3 +1,11 @@
+/* =======================================
+ * 株式会社 雄建 問い合わせ結果モーダル
+ * URL: /src/components/Modal.tsx
+ * Referenced in: /src/components/Top/ContainerContact.tsx
+ * Created: 2026-04-04
+ * Last updated: 2026-09-08
+ * ======================================= */
+
 import { useEffect, useRef } from 'react';
 import type { ReactNode } from 'react';
 import clsx from 'clsx';
@@ -19,18 +27,30 @@ const Modal: React.FC<ModalProps> = ({
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
+    const previouslyFocusedElement = document.activeElement as HTMLElement;
+
+    document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open');
     closeButtonRef.current?.focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         onClose();
       }
+
+      if (event.key === 'Tab') {
+        event.preventDefault();
+        closeButtonRef.current?.focus();
+      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
 
     return () => {
+      document.body.style.overflow = '';
+      document.body.classList.remove('modal-open');
       document.removeEventListener('keydown', handleKeyDown);
+      previouslyFocusedElement?.focus();
     };
   }, [onClose]);
 

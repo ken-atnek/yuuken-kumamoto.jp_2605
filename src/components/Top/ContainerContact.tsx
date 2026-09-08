@@ -297,9 +297,14 @@ export default function ContainerContact() {
             <div className={styles.boxForm}>
               <dl>
                 <div className={styles.boxIntro}>
-                  <dt>どなたのご紹介ですか？</dt>
+                  <dt>
+                    <label htmlFor="contact-referral">
+                      どなたのご紹介ですか？
+                    </label>
+                  </dt>
                   <dd>
                     <select
+                      id="contact-referral"
                       value={referral}
                       onChange={(e) => setReferral(e.target.value)}
                     >
@@ -312,9 +317,12 @@ export default function ContainerContact() {
                   </dd>
                 </div>
                 <div>
-                  <dt>お名前</dt>
+                  <dt>
+                    <label htmlFor="contact-name">お名前</label>
+                  </dt>
                   <dd>
                     <input
+                      id="contact-name"
                       type="text"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
@@ -329,9 +337,12 @@ export default function ContainerContact() {
                   </dd>
                 </div>
                 <div>
-                  <dt>ふりがな</dt>
+                  <dt>
+                    <label htmlFor="contact-furigana">ふりがな</label>
+                  </dt>
                   <dd>
                     <input
+                      id="contact-furigana"
                       type="text"
                       value={furigana}
                       onChange={(e) => setFurigana(e.target.value)}
@@ -346,9 +357,12 @@ export default function ContainerContact() {
                   </dd>
                 </div>
                 <div>
-                  <dt>住所</dt>
+                  <dt>
+                    <label htmlFor="contact-address">住所</label>
+                  </dt>
                   <dd>
                     <input
+                      id="contact-address"
                       type="text"
                       value={address}
                       onChange={(e) => setAddress(e.target.value)}
@@ -363,9 +377,12 @@ export default function ContainerContact() {
                   </dd>
                 </div>
                 <div>
-                  <dt>電話番号</dt>
+                  <dt>
+                    <label htmlFor="contact-phone">電話番号</label>
+                  </dt>
                   <dd>
                     <input
+                      id="contact-phone"
                       type="tel"
                       inputMode="tel"
                       value={phone}
@@ -381,9 +398,12 @@ export default function ContainerContact() {
                   </dd>
                 </div>
                 <div>
-                  <dt>メールアドレス</dt>
+                  <dt>
+                    <label htmlFor="contact-email">メールアドレス</label>
+                  </dt>
                   <dd>
                     <input
+                      id="contact-email"
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -399,9 +419,12 @@ export default function ContainerContact() {
                 </div>
 
                 <div>
-                  <dt className={styles.positionTop}>お問い合わせ内容</dt>
+                  <dt className={styles.positionTop}>
+                    <label htmlFor="contact-message">お問い合わせ内容</label>
+                  </dt>
                   <dd>
                     <textarea
+                      id="contact-message"
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       onFocus={() => clearInvalid('message')}
