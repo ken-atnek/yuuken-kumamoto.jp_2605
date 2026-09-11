@@ -33,7 +33,7 @@ export default function ContainerAbout() {
           <div>
             <dt>設立</dt>
             <dd>
-              <time dateTime="2018-02-02">2018年2月2日</time>
+              <time dateTime="2018-02-02">2018年2月</time>
             </dd>
           </div>
           <div>
