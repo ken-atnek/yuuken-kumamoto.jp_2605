@@ -77,7 +77,7 @@
           "id": "003",
           "location": "山鹿市",
           "name": "露天湯椛　白暖簾 :宿泊施設",
-          "thumbnail": "/db/works/images/new-construction/03/02.webp",
+          "thumbnail": "/db/works/images/new-construction/03/01.webp",
           "images": [
             "/db/works/images/new-construction/03/01.webp",
             "/db/works/images/new-construction/03/02.webp",
@@ -91,6 +91,25 @@
             "/db/works/images/new-construction/03/10.webp",
             "/db/works/images/new-construction/03/11.webp",
             "/db/works/images/new-construction/03/12.webp"
+          ]
+        },
+        {
+          "id": "004",
+          "location": "山鹿市",
+          "name": "露天湯椛　黒暖簾 :宿泊施設",
+          "thumbnail": "/db/works/images/new-construction/04/01.webp",
+          "images": [
+            "/db/works/images/new-construction/04/01.webp",
+            "/db/works/images/new-construction/04/02.webp",
+            "/db/works/images/new-construction/04/03.webp",
+            "/db/works/images/new-construction/04/04.webp",
+            "/db/works/images/new-construction/04/05.webp",
+            "/db/works/images/new-construction/04/06.webp",
+            "/db/works/images/new-construction/04/07.webp",
+            "/db/works/images/new-construction/04/08.webp",
+            "/db/works/images/new-construction/04/09.webp",
+            "/db/works/images/new-construction/04/10.webp",
+            "/db/works/images/new-construction/04/11.webp"
           ]
         }
       ]
